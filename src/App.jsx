@@ -1,16 +1,33 @@
+import React from "react";
 import blueBlob from "./assets/blue-blob.svg"
 import yellowBlob from "./assets/yellow-blob.svg"
+import Quiz from "./components/Quiz";
+
 
 function App() {
-  return (
-    <main className="main">
+  const [quizRunnig, setQuizRunning] = React.useState(false);
 
+  
+  function startQuiz() {
+    setQuizRunning(preValue => !preValue)
+  }
+  return (
+    <main>
       <img src={yellowBlob} className="yellow-blob" alt="" />
-      <img src={blueBlob} className="blue-blob" alt="" />
-      <h1>Quizzical</h1>
-      <h3>Interactive quizzes app for enhancing knowledge.</h3>
-      <button className="start--btn">Start quiz</button>
-    </main>
+      {
+        !quizRunnig ? 
+          
+        <div className="main">
+          <h1>Quizzical</h1>
+          <h3>Interactive quizzes app for enhancing knowledge.</h3>
+          <button className="start--btn" onClick={startQuiz}>Start quiz</button>
+        </div>
+          
+        :
+        <Quiz />
+      }
+        <img src={blueBlob} className="blue-blob" alt="" />
+      </main> 
   );
 }
 

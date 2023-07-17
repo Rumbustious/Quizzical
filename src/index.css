@@ -5,8 +5,8 @@ body {
   font-family: "Karla", sans-serif;
   color: #293264;
 }
-button{
-    font-family: "Karla", sans-serif;
+button {
+  font-family: "Karla", sans-serif;
 }
 .main {
   display: flex;
@@ -16,10 +16,10 @@ button{
   margin-top: 25vh;
 }
 .main > h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 .main > h3 {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 .start--btn {
   background-color: #4d5b9e;
@@ -29,14 +29,26 @@ button{
   border: none;
   border-radius: 1rem;
 }
+.start--btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #4d5b9e;
+  border: 2px #4d5b9e solid;
+  border-radius: 1rem;
+}
 .yellow-blob {
   position: absolute;
   right: 0;
   top: 0;
 }
 .blue-blob {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-  }
-  
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.quiz--container {
+  padding: 2rem 7rem;
+}
+.question--container {
+  border-bottom: black 1px solid;
+}
